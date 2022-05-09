@@ -188,7 +188,7 @@ footer {
     float: left;
     width: 50%;
     padding: 10px;
-    padding-top: 3%; /*Space between top of column and headings */
+    padding-top: 1.9%; /*Space between top of column and headings */
     height: 400px;
     background-color: #f2f2f4;
 }
