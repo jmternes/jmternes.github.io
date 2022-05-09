@@ -10,7 +10,7 @@ h1 {
     text-transform: uppercase;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
-    margin-top: 0.75%; /* Adds a small margin ABOVE h1 elements */
+    margin-top: 0.65%; /* Adds a small margin ABOVE h1 elements */
     color: #5680E9;
 }
 
