@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>JMT</title>
+    <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/731df4f890.js" crossorigin="anonymous"></script>
+</head>
+
+<!--BODY-->
+<body>
+
+    <!--NAVBAR-->
+    <div class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!--Breaks insterted here for space between navbar and first heading-->
+    <br>
+    <br>
+
+    <!--Background Video-->
+    <div id="home">
+        <video autoplay muted loop id="Typing_Video">
+            <source src="./css/images/typing_video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!--Video Text-->
+    <div class="video_text">
+        <h1 class="white-text">John Michael Ternes | Software Developer</h1>
+        <strong>
+            <p class="center">
+                <!--Do I want this quote? Something shorter maybe-->
+                <br>
+                <br>My name is John Michael Ternes. Welcome to my portfolio website. Here, I will tell you about my background and my continued learning journey.
+                <br>
+                <br>Thank you for stopping by, and enjoy!
+            </p>
+        </strong>
+    </div>
+
+    <!--About Section-->
+    <div class="row" id="about">
+        <!--Left Column-->
+        <div class="column_2">
+            <div class="icons">
+            <i class="fa-solid fa-basketball fa-2xl"></i>
+            <i class="fa-solid fa-football fa-2xl"></i>
+            <i class="fa-solid fa-baseball-bat-ball fa-2xl"></i>
+            <i class="fa-solid fa-futbol fa-2xl"></i>
+            <i class="fa-solid fa-golf-flag-hole fa-2xl"></i>
+            <br>
+            <br>
+            <i class="fa-solid fa-film fa-2xl"></i>
+            <i class="fa-solid fa-music fa-2xl"></i>
+            <i class="fa-solid fa-campfire fa-2xl"></i>
+            <i class="fa-solid fa-person-hiking fa-2xl"></i>
+            <i class="fa-solid fa-utensils fa-2xl"></i>
+            <br>
+            <br>
+            <i class="fa-solid fa-motorcycle fa-2xl"></i>
+            <i class="fa-solid fa-guitar fa-2xl"></i>
+            <i class="fa-solid fa-paintbrush fa-2xl"></i>
+            <i class="fa-solid fa-wine-glass fa-2xl"></i>
+        </div>
+        </div>
+        <!--Right Column-->
+        <div class="column_1">
+            <h1>About</h1>
+            <p>
+                I am a software developer, learning every day. I enjoy so much about life: sports (my team is the Arkansas Razorbacks), movies, music, the outdoors, cooking, motorcycles, the list goes on and on...
+                <br>
+                <br>I am a graduate of <a href="https://www.learncodinganywhere.com">The Tech Academy</a>'s Software Developer Boot Camp, and trained and
+                experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C#, and more.
+                <br>
+                <br>I am a full-stack developer and would love to work with you on your project. <a href="#contact">Contact</a> me below!
+            </p>
+        </div>
+    </div>
+
+    <!--GitHub Section (note: both columns have a link to same destination, maybe an arrow pointing to the image link in right column?)-->
+    <div class="row" id="github">
+        <!--Left Column-->
+        <div class="column_1">
+            <h1>GitHub</h1>
+            <p>
+                You can view my GitHub profile here:
+                <br>
+                <p class="center"><a href="https://github.com/jmternes" target="_blank">My GitHub</a></p>
+            </p>
+        </div>
+        <!--Right Column-->
+        <div class="column_2">
+            <a href="https://github.com/jmternes" target="_blank"><img src="./css/images/githublogo.png" alt="GitHub Logo"></a>
+        </div>
+    </div>
+
+    <!--Contact Section-->
+    <div class="row" id="contact">
+        <!--Contact image, left column-->
+        <div class="column_2 column_tall">
+            <img src="./css/images/mail.png" alt="Contact Image">
+        </div>
+        <!--Contact form, right column-->
+        <div class="column_1 column_tall">
+            <h1>Contact</h1>
+            <form action="formspreeendpoint" method="POST">
+                <label>Name:</label>
+                    <input type="text" placeholder="Your Name">
+                <label>Email:</label>
+                    <input type="text" name="Email" id="Email" placeholder="Your Email Address">
+                <label>Message:</label>
+                    <input type="text" id="Message" name="Message" placeholder="Please leave your message here">
+                    <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+    <!--Footer Section-->
+    <footer>
+        <p>
+            <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a></p>
+            <br>
+        </p>
+    </footer>
+</body>
+</html>
