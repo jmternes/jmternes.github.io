@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
-    <title>JMT</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <title>JMT | Software Developer</title>
+    <link rel="stylesheet" href="./css/portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
@@ -17,9 +17,10 @@
     <!--NAVBAR-->
     <div class="navbar">
         <a href="#home" class="active">Home</a>
+        <a href=#Slideshow>Slideshow</a>
         <a href="#about">About</a>
         <a href="#github">GitHub</a>
-        <a href="#contact">Contact</a>
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
     </div>
 
     <!--Breaks insterted here for space between navbar and first heading-->
@@ -29,7 +30,7 @@
     <!--Background Video-->
     <div id="home">
         <video autoplay muted loop id="Typing_Video">
-            <source src="./typing_video_Trim.mp4" type="video/mp4">
+            <source src="./css/images/typing_video.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
     </div>
@@ -41,11 +42,92 @@
             <p class="center">
                 <!--Do I want this quote? Something shorter maybe-->
                 <br>
+                <br>
                 <br>My name is John Michael Ternes. Welcome to my portfolio website. Here, I will tell you about my background and my continued learning journey.
                 <br>
-                <br>Thank you for stopping by, and enjoy!
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                I'm a graduate of the Tech Academy, and I'd love to work with you on your next project.
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                I'm passionate about learning everything I can about the web, as well as creating beautiful, efficient websites.
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                When I'm not on the computer, I spend my time with sports, movies, games, cooking, my motorcycle, and much more.
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                Thank you for stopping by, and enjoy!
+                <br>
+                <br>
+                <br>
             </p>
         </strong>
+    </div>
+    <!-- NEW SLIDESHOW SECTION -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!-- Slide 1/6 -->
+                <div class="mySlides fade">
+                    <img src="./css/images/avatar.png" alt="photo of me" class="Slideshow_Images">
+                    <div class="text">Let me help you with your next project!</div>
+                </div>
+                <!-- Slide 2/6 -->
+                <div class="mySlides fade">
+                    <img src="./css/images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, JS logos" class="Slideshow_Images">
+                    <div class="text">I'm a full-stack developer,<br> trained in:<br> HTML, CSS, JavaScript...</div>
+                </div>
+                <!--Slide 3/6 -->
+                <div class="mySlides fade">
+                    <img src="./css/images/Python.png" alt="Pyhton logo" class="Slideshow_Images">
+                    <div class="text">the popular programming language Python...</div>
+                </div>
+                <!-- Slide 4/6 -->
+                <div class="mySlides fade">
+                    <img src="./css/images/C_Sharp_and_Dot_NET.png" alt="C# logo" class="Slideshow_Images">
+                    <div class="text">C#, .NET Framework, ASP.NET, MVC...</div>
+                </div>
+                <!-- Slide 5/6 -->
+                <div class="mySlides fade">
+                    <img src="./css/images/SQL_and_Database.jpg" alt="SQL logo" class="Slideshow_Images">
+                    <div class="text">back end development, databases and SQL.</div>
+                </div>
+                <!-- Slide 6/6 -->
+                <div class="mySlides fade">
+                    <img src="./css/images/7f5.gif" alt="Thumbs up" class="Slideshow_Images">
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                </div>
+                <!-- Previous and next buttons-->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- Slideshow dots -->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
     </div>
 
     <!--About Section-->
@@ -100,30 +182,31 @@
         </div>
         <!--Right Column-->
         <div class="column_2">
-            <a href="https://github.com/jmternes" target="_blank"><img src="images/githublogo.png" alt="GitHub Logo"></a>
+            <a href="https://github.com/jmternes" target="_blank"><img src="./css/images/githublogo.png" alt="GitHub Logo"></a>
         </div>
     </div>
 
     <!--Contact Section-->
-    <div class="row" id="contact">
-        <!--Contact image, left column-->
-        <div class="column_2 column_tall">
-            <img src="../images/mail.png" alt="Contact Image">
-        </div>
-        <!--Contact form, right column-->
-        <div class="column_1 column_tall">
-            <h1>Contact</h1>
-            <form action="formspreeendpoint" method="POST">
-                <label>Name:</label>
-                    <input type="text" placeholder="Your Name">
-                <label>Email:</label>
-                    <input type="text" name="Email" id="Email" placeholder="Your Email Address">
-                <label>Message:</label>
-                    <input type="text" id="Message" name="Message" placeholder="Please leave your message here">
-                    <input type="submit" value="SUBMIT">
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/mvolvjwq" method="POST" class="form-container">
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                    <input type="text" placeholder="Type your name here" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                    <input type="text" placeholder="Type your phone number here" name="phone">
+                <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Type your email address here" name="email" required>
+                <label for="message"><b>Message</b></label>
+                    <input type="text" placeholder="Say hello!" name="message">
+
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
             </form>
         </div>
     </div>
+
 
     <!--Footer Section-->
     <footer>
@@ -132,5 +215,6 @@
             <br>
         </p>
     </footer>
+    <script src="js/portfolio.js"></script>
 </body>
 </html>
