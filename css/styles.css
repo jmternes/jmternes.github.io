@@ -168,3 +168,9 @@ input[type=text], select, textarea {
 ul {
 	list-style-type: none;
 }
+
+.logo {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
