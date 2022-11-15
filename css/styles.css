@@ -164,3 +164,7 @@ input[type=text], select, textarea {
     background-color: #151D22;
     padding: 20px;
   }
+
+ul {
+	list-style-type: none;
+}
