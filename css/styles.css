@@ -126,7 +126,12 @@ p {
     color: #BBE1FA;
 }
 
-.a:visited {
+a:hover {
+	color: white;
+	transition: .4s transform;
+}
+
+a:visited {
     text-decoration: none;
     color: #BBE1FA;
 }
