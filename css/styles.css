@@ -126,10 +126,16 @@ p {
     color: #BBE1FA;
 }
 
+a {
+	text-decoration: none;
+
 a:hover {
 	color: white;
 	transition: .4s transform;
 }
+	
+a:active {
+	text-decoration: none;
 
 a:visited {
     text-decoration: none;
