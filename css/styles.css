@@ -109,6 +109,10 @@ body, html {
     width: 70rem;
 }
 
+.skillstxt {
+    width: 60%;
+}
+
 /* PROJECTS PAGE */
 
 .wrapper {
