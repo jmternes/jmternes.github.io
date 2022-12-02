@@ -118,7 +118,8 @@ body, html {
 
 .wrapper {
     width: 46rem;
-    text-align: right;
+    text-align: cener;
+    text-decoration: none;
     line-height: 40px;
 }
 
