@@ -1,0 +1,309 @@
+body {
+    font-family: 'Enriqueta', serif;
+    color: var(--light-color);
+    font-family: 'Unbounded', cursive;
+    background-color: var(--dark-color);
+  }
+  nav {
+    background-color: var(--dark-color);
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--light-color);
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  nav li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  nav a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 18px;
+  }
+  nav a:hover {
+    color: var(--accent-color);
+    transition: .25s;
+  }
+
+  .jmt-logo {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.25rem;
+    
+  }
+
+  .jmt-logo img {
+    width: 60px;
+  }
+
+  .github-logo {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .github-logo img {
+    width: 40px;
+  }
+
+  .header-container {
+      display: block;
+      position: relative;
+      width: 40rem;
+      height: fit-content;
+      margin-left: 3.5rem;
+      margin-top: 2rem;
+      border: 1px solid var(--light-color);
+  }
+
+  .header-container:hover {
+    border: 1px solid var(--accent-color);
+    transition: .25s;
+  }
+
+:root {
+  --light-color: #f0f0f0;
+  --dark-color: #1a1a1a;
+  /*--accent-color: #856be3; purple*/
+  --accent-color: #53a3fe;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+b {
+  color: var(--light-color);
+  font-size: 24px;
+}
+
+.hello-there {
+    font-size: 60px;
+    margin-left: 1rem;
+    margin-top: .75rem;
+}
+
+.imjm {
+  margin-left: 1rem;
+  margin-top: .5rem;
+}
+
+.about-container {
+      display: block;
+      position: relative;
+      width: 40rem;
+      height: fit-content;
+      float: right;
+      margin-right: 3.5rem;
+      margin-top: 2.5rem;
+      border: 1px solid var(--light-color);
+}
+
+.about-container:hover {
+  border: 1px solid var(--accent-color);
+  transition: .25s;
+}
+
+.about {
+  margin-left: 1rem;
+  margin-top: .75rem;
+}
+
+.about a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+.about a:hover {
+  color: var(--accent-color);
+  transition: 0.5s;
+}
+
+.about-text {
+  margin-left: 1rem;
+  margin-top: .5rem;
+}
+
+.work-container {
+  display: block;
+  position: relative;
+  width: 40rem;
+  float: left;
+  clear: both;
+  height: fit-content;
+  margin-left: 3.5rem;
+  margin-top: 2.5rem;
+  border: 1px solid var(--light-color);
+}
+
+.work-container:hover {
+  border: 1px solid var(--accent-color);
+  transition: .25s;
+}
+
+.work {
+  margin-left: 1rem;
+  margin-top: .75rem;
+}
+
+.work a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+.work a:hover {
+  color: var(--accent-color);
+  transition: .5s;
+}
+
+.work-text {
+  margin-left: 1rem;
+  margin-top: .5rem;
+}
+
+.work-text a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+.work-text a:hover {
+  color: var(--accent-color);
+  transition: .25s;
+}
+
+/* MAIL PAGE */
+
+.mail-container {
+  display: block;
+  text-align: center;
+  width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  border: 1px solid var(--light-color);
+}
+
+.mail-container:hover {
+  border: 1px solid var(--accent-color);
+  transition: .25s;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+form {
+  display: inline-block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+textarea {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
+  width: 300px;
+  height: 150px;
+}
+
+textarea:focus {
+  outline: none;
+  border: 2px solid var(--accent-color);
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
+}
+
+input:focus {
+  border: 2px solid var(--accent-color);
+  outline: none;
+}
+
+.name-field {
+  width: 300px;
+}
+
+.mail-send-btn {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  font-family: 'Unbounded', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.mail-send-btn:hover {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  font-family: 'Unbounded', sans-serif;
+}
+
+/* WORK STYLING */
+
+.my-work-container {
+  display: block;
+  text-align: center;
+  border: 1px solid var(--light-color);
+  margin-top: 2rem;
+  width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-work-container:hover {
+  border: 1px solid var(--accent-color);
+  transition: .25s;
+}
+
+.ind-header {
+  font-size: 40px;
+  color: var(--light-color);
+  margin-top: 1.5rem;
+}
+
+h4 {
+  text-decoration: underline;
+}
+
+.my-work-text a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+.my-work-text a:hover {
+  color: var(--accent-color);
+  transition: .25s;
+}
+
+/*ABOUT STYLING */
+
+.my-about-text {
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.my-about-text a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+.my-about-text a:hover {
+  color: var(--accent-color);
+  transition: .25s;
+}
