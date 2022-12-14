@@ -29,30 +29,36 @@
   
   div.jmt-logo {
     left: 3%;
+    border-right: 1px solid var(--light-color);
+    padding-right: 1rem;
   }
 
   div.github-logo {
     right: 3%;
+    border-left: 1px solid var(--light-color);
+    padding-left: 1rem;
   }
   
   span.material-icons {
     color: var(--accent-color);
   }
   
-  .my-work-container {
+  div.my-work-container {
     border: 1px solid var(--accent-color);
   }
   
-  .mail-container {
+  div.mail-container {
     border: 1px solid var(--accent-color);
   }
   
-  .name-field {
-    width: 20%;
+  input.name-field {
+    width: 60%;
   }
   
   textarea {
-    width: 20%; 
+    width: 60%;
+  }
+  
 }
  /*END MOBILE STYLING*/
 
