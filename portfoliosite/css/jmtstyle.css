@@ -47,6 +47,12 @@
     border: 1px solid var(--accent-color);
   }
   
+  .name-field {
+    width: 20%;
+  }
+  
+  textarea {
+    width: 20%; 
 }
  /*END MOBILE STYLING*/
 
