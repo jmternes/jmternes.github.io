@@ -30,13 +30,13 @@
   div.jmt-logo {
     left: 3%;
     border-right: 1px solid var(--light-color);
-    padding-right: 1rem;
+    padding-right: .2rem;
   }
 
   div.github-logo {
     right: 3%;
     border-left: 1px solid var(--light-color);
-    padding-left: 1rem;
+    padding-left: .2rem;
   }
   
   span.material-icons {
