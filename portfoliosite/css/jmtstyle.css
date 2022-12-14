@@ -55,8 +55,8 @@
     width: 60%;
   }
   
-  textarea {
-    width: 60%;
+  textarea#message {
+    width: 80%;
   }
   
 }
