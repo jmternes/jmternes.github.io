@@ -34,13 +34,17 @@
   div.github-logo {
     right: 3%;
   }
-
-  span {
-    margin-left: 0;
+  
+  span.material-icons {
+    color: var(--accent-color);
   }
   
-  nav a {
-    color: var(--accent-color);
+  .my-work-container {
+    border: 1px solid var(--accent-color);
+  }
+  
+  .mail-container {
+    border: 1px solid var(--accent-color);
   }
   
 }
