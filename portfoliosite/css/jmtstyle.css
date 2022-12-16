@@ -7,21 +7,21 @@
   }
 
   div.header-container {
-    width: 85%;
+    width: auto;
     margin: auto;
     margin-top: 2.5rem;
     border: 1px solid var(--accent-color);
   }
 
   div.about-container {
-    width: 85%;
+    width: auto;
     margin: auto;
     margin-top: 2.5rem;
     border: 1px solid var(--accent-color);
   }
 
   div.work-container {
-    width: 85%;
+    width: auto;
     margin: auto;
     margin-top: 2.5rem;
     border: 1px solid var(--accent-color);
