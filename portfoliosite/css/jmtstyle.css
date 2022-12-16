@@ -7,21 +7,21 @@
   }
 
   div.header-container {
-    width: auto;
+    width: 85%;
     margin: auto;
     margin-top: 2.5rem;
     border: 1px solid var(--accent-color);
   }
 
   div.about-container {
-    width: auto;
+    width: 85%;
     margin: auto;
     margin-top: 2.5rem;
     border: 1px solid var(--accent-color);
   }
 
   div.work-container {
-    width: auto;
+    width: 85%;
     margin: auto;
     margin-top: 2.5rem;
     border: 1px solid var(--accent-color);
@@ -36,7 +36,7 @@
   div.github-logo {
     right: 3%;
     border-left: 1px solid var(--light-color);
-    padding-left: .2rem;
+    padding-left: .5rem;
   }
   
   span.material-icons {
