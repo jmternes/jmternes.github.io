@@ -25,6 +25,7 @@
     margin: auto;
     margin-top: 2.5rem;
     border: 1px solid var(--accent-color);
+    margin-bottom: 3.5rem;
   }
 
   div.jmt-logo {
@@ -57,6 +58,19 @@
 
   textarea#message {
     width: 80%;
+  }
+
+  button.toggleBtn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 28px;
+  }
+
+  .light-mode button.toggleBtn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
   }
 
 }
