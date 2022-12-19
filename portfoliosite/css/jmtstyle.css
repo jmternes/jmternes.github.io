@@ -3,7 +3,7 @@
 
 @media (max-width: 600px) {
   html {
-    
+
   }
 
   div.header-container {
@@ -26,7 +26,7 @@
     margin-top: 2.5rem;
     border: 1px solid var(--accent-color);
   }
-  
+
   div.jmt-logo {
     left: 3%;
     border-right: 1px solid var(--light-color);
@@ -38,27 +38,27 @@
     border-left: 1px solid var(--light-color);
     padding-left: .5rem;
   }
-  
+
   span.material-icons {
     color: var(--accent-color);
   }
-  
+
   div.my-work-container {
     border: 1px solid var(--accent-color);
   }
-  
+
   div.mail-container {
     border: 1px solid var(--accent-color);
   }
-  
+
   input.name-field {
     width: 60%;
   }
-  
+
   textarea#message {
     width: 80%;
   }
-  
+
 }
  /*END MOBILE STYLING*/
 
@@ -97,7 +97,7 @@ body {
     position: absolute;
     top: 1.5rem;
     left: 3rem;
-    
+
   }
 
   .jmt-logo img {
@@ -370,4 +370,172 @@ h4 {
 .my-about-text a:hover {
   color: var(--accent-color);
   transition: .25s;
+}
+
+
+.toggleBtn {
+  background: transparent; /* Remove the default button styling */
+  border: none; /* Remove the default button border */
+  color: var(--light-color); /* Set the icon color */
+  cursor: pointer; /* Add a hover effect */
+  font-size: 28px; /* Set the icon size */
+  position: absolute; /* Position the button absolutely */
+  bottom: 16px; /* Set the distance from the bottom */
+  right: 16px; /* Set the distance from the right */
+}
+
+.toggleBtn:hover {
+  color: var(--accent-color);
+  transition: .5s;
+}
+
+.jmt-icon {
+  display: none;
+}
+
+/* LIGHT MODE STYLING */
+
+.light-mode .jmt-icon {
+  position: absolute;
+  top: 1.5rem;
+  left: 3rem;
+  display: block;
+}
+
+.light-mode .jmt-icon img {
+  width: 60px;
+}
+
+.light-mode {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+
+}
+
+.light-mode nav {
+  background-color: var(--light-color);
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.light-mode nav a {
+  color: var(--dark-color);
+}
+
+.light-mode nav a:hover {
+  color: var(--accent-color);
+  transition: .25s;
+}
+
+.light-mode a:hover {
+  color: var(--light-color);
+}
+
+.light-mode .header-container {
+  border: 1px solid var(--dark-color)
+}
+
+.light-mode .header-container:hover {
+  background-color: var(--accent-color);
+  transition: .5s;
+}
+
+.light-mode .about-container {
+  border: 1px solid var(--dark-color);
+}
+
+.light-mode .about-container:hover {
+  background-color: var(--accent-color);
+  transition: .5s;
+}
+
+.light-mode .work-container {
+  border: 1px solid var(--dark-color);
+}
+
+.light-mode .work-container:hover {
+  background-color: var(--accent-color);
+  transition: .5s;
+}
+
+.light-mode b {
+  color: var(--dark-color);
+}
+
+.light-mode a {
+  color: var(--dark-color);
+}
+
+.light-mode .toggleBtn {
+  background: transparent; /* Remove the default button styling */
+  border: none; /* Remove the default button border */
+  color: var(--dark-color); /* Set the icon color */
+  cursor: pointer; /* Add a hover effect */
+  font-size: 28px; /* Set the icon size */
+  position: absolute; /* Position the button absolutely */
+  bottom: 16px; /* Set the distance from the bottom */
+  right: 16px; /* Set the distance from the right */
+}
+
+.light-mode .toggleBtn:hover {
+  color: var(--accent-color);
+  transition: .5s;
+}
+
+.light-mode .jmt-logo {
+  display: none;
+}
+
+/* LIGHT ABOUT PAGE */
+
+.light-mode .my-work-container {
+  border: 1px solid var(--dark-color);
+}
+
+.light-mode .my-work-container:hover {
+  background-color: var(--accent-color);
+}
+
+.light-mode .ind-header {
+  color: var(--dark-color);
+}
+
+.light-mode .mail-container {
+  border: 1px solid var(--dark-color);
+}
+
+.light-mode .mail-container:hover {
+  background-color: var(--accent-color);
+}
+
+.light-mode input {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+}
+
+.light-mode input:focus {
+  border: 2px solid var(--dark-color);
+  outline: none;
+}
+
+.light-mode textarea {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+}
+
+.light-mode textarea:focus {
+  border: 2px solid var(--dark-color);
+  outline: none;
+}
+
+.light-mode .mail-send-btn {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.light-mode .mail-send-btn:hover {
+  color: var(--light-color);
+  background-color: var(--accent-color);
+  border: 1px solid var(--light-color);
 }
