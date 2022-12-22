@@ -66,11 +66,21 @@
         light_mode
       </i></button>
 
-      <script>function toggleMode() {
+
+        <script>
+          function toggleMode() {
+            var element = document.body;
+            element.classList.toggle("light-mode");
+          }
+        </script>
+
+
+
+      <!--<script>function toggleMode() {
         var element = document.body;
         element.classList.toggle("light-mode");
         }
-      </script>
+        </script> -->
       <!--script not loading? hmmm-->
   </body>
 </html>

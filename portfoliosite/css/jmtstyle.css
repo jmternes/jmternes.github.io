@@ -28,6 +28,28 @@
     margin-bottom: 3.5rem;
   }
 
+  div.my-work-container {
+    width: auto;
+    margin: auto;
+    margin-top: 2.5rem;
+  }
+
+
+
+  div.my-work-container h2 {
+    text-align: center;
+  }
+
+  div.my-work-container p {
+    width: 85%;
+  }
+
+  div.mail-container {
+    width: auto;
+    margin: auto;
+    margin-top: 2.5rem;
+  }
+
   div.jmt-logo {
     left: 3%;
     border-right: 1px solid var(--light-color);
