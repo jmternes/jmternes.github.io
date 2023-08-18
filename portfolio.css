@@ -13,21 +13,86 @@ body {
 .body-container {
     width: 80px;
     height: 80px;
-    border: 1px solid white;
-    display: flex;
-    justify-content: center;
-    /* display: block;
-    justify-content: end;
+    border: 15px solid rgb(95, 95, 219);
+    border-radius: 50%;
+    color: white;
+    display: block;
+    background-color: white;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-    margin-top: 100px; */
-    
+    margin-top: 100px;
 }
 
 .body-container:hover {
-    background-color: white;
+    background-color: rgb(95, 95, 219);
+    border: 15px solid white;
+}
+
+#red {
+    width: 80px;
+    height: 80px;
+    border: 15px solid rgb(205, 44, 44);
+    border-radius: 50%;
+    color: white;
+}
+
+#red:hover {
+    background-color: rgb(205, 44, 44);
+    border: 15px solid white;
+}
+
+#orange {
+    width: 80px;
+    height: 80px;
+    border: 15px solid rgb(255, 116, 16);
+    border-radius: 50%;
+    color: white;
+}
+
+#orange:hover {
+    background-color: rgb(255, 116, 16);
+    border: 15px solid white;
+}
+
+#yellow {
+    width: 80px;
+    height: 80px;
+    border: 15px solid rgb(255, 243, 17);
+    border-radius: 50%;
+    color: white;
+}
+
+#yellow:hover {
+    background-color: rgb(255, 243, 17);
+    border: 15px solid white;
+}
+
+#green {
+    width: 80px;
+    height: 80px;
+    border: 15px solid rgb(44, 205, 87);
+    border-radius: 50%;
+    color: white;
+}
+
+#green:hover {
+    background-color: rgb(44, 205, 87);
+    border: 15px solid white;
+}
+
+#blue {
+    width: 80px;
+    height: 80px;
+    border: 15px solid rgb(95, 95, 219);
+    border-radius: 50%;
+    color: white;
+}
+
+#blue:hover {
+    background-color: rgb(95, 95, 219);
+    border: 15px solid white;
 }
 
 h1 {
