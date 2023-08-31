@@ -1,10 +1,12 @@
 :root {
     --blue: #53a3fe;
+    --white: #fff;
+    --gray: #333;
 }
 
 body {
     margin: 0;
-    background-color: #333;
+    background-color: var(--gray);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,8 +31,8 @@ body {
     transform: rotateZ(360deg);
     transition: .8s;
     background-color: var(--blue);
-    color: #333;
-    border: 3px dashed #333;
+    color: var(--gray);
+    border: 3px dashed var(--gray);
 }
 
 .body-container:hover body {
@@ -39,7 +41,7 @@ body {
 
 .body-container h1 {
     margin: 0;
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     /* font-family: 'Rubik', sans-serif; */
     font-family: 'Zeyada', cursive;
     width: 100px;
@@ -49,7 +51,49 @@ body {
     justify-content: center;
 }
 
+ p {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Zeyada', cursive;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5rem;
+ }
+
 img {
     width: 100px;
     height: 100px;
+}
+
+.body-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    color: var(--white);
+    font-family: 'Rubik', 'sans-serif';
+}
+
+.body-content h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 5rem;
+    border-bottom: 2px ;
+}
+
+.body-content h4 {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    border-bottom: 2px ;
 }
