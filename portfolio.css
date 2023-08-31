@@ -1,8 +1,9 @@
-/**** GENERAL STYLING ******/
+/*
+*** GENERAL STYLING *****
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
 /* BODY */
-
+/*
 body {
     display: flex;
     background-color: rgb(18, 18, 18);
@@ -99,9 +100,10 @@ h1 {
     text-transform: uppercase;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
-    margin-top: 0.35%; /* Adds a small margin ABOVE h1 elements */
+    margin-top: 0.35%; /* Adds a small margin ABOVE h1 elements *//*
     color: #5680E9;
 }
+
 
 h1:hover {
     transform: scale(1.1);
@@ -112,7 +114,7 @@ h1:hover {
     color: #5680E9;
 }
 
-/* Paragraph elements */
+/* Paragraph elements */ /*
 
 p {
     font-family: 'Quicksand', sans-serif;
@@ -128,7 +130,7 @@ p:hover {
     transform: scale(1.01);
 }
 
-/* Center class - applies to all elements with the class "center" */
+/* Center class - applies to all elements with the class "center" */ /*
 
 .center {
     text-align: center;
@@ -364,4 +366,9 @@ form {
     background-color: #f2f2f2;
     padding: 10px;
     font-family: 'Quicksand';
+}
+*/
+
+.body-container {
+    
 }
