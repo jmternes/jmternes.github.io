@@ -84,6 +84,10 @@ img {
     /* font-family: 'Zeyada', cursive; */
 }
 
+.body-content a {
+    text-decoration: none;
+}
+
 .body-content h2 {
     display: flex;
     justify-content: center;
@@ -120,7 +124,7 @@ img {
 
 }
 
-a {
+h4 a {
     text-decoration: none;
     color: var(--blue);
 }
@@ -129,6 +133,65 @@ a:hover {
     color: white;
     transition: .3s;
 }
+
+.home {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 2rem;
+    left: 2rem;
+    width: 60px;
+    height: 60px;
+    border: 3px dashed var(--blue);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.home a {
+    text-decoration: none;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.home span {
+    font-size: 32px;
+}
+
+.home:hover {
+    transform: rotateZ(360deg);
+    transition: .8s;
+    background-color: var(--blue);
+    border: 3px dashed var(--gray);
+}
+
+.home:hover span {
+    color: var(--gray);
+}
+
+/* Work */
+
+h4.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+h4.icons span {
+    font-size: 36px;
+}
+
+h4.icons:hover span {
+    color: white;
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+
 
 /* Mobile  */
 
