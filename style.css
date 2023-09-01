@@ -13,17 +13,14 @@ body {
 }
 
 .body-container {
-    position: absolute;
-    top: 15rem;
+    margin-top: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 3px dashed var(--blue);
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
     color: var(--blue);
-    padding: 5%;
+    padding: 75px;
     cursor: pointer;
 }
 
