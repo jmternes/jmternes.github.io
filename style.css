@@ -79,7 +79,8 @@ img {
     right: 0;
     overflow: auto;
     color: var(--white);
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Grandiflora One', serif;
+    /* font-family: 'Outfit', sans-serif; */
     /* font-family: 'Rubik', 'sans-serif'; */
     /* font-family: 'Zeyada', cursive; */
 }
@@ -190,10 +191,17 @@ h4.icons:hover span {
 a {
     text-decoration: none;
 }
-/*
-.work-text {
-    margin-top: 5rem;
-} */
+
+h4.work-text {
+    border-top: none;
+    border-bottom: none;
+    width: 60%;
+    text-align: right;
+    letter-spacing: 2px;
+    line-height: 28px;
+    position: relative;
+    color: var(--blue);
+}
 
 
 
