@@ -71,7 +71,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    gap: 1rem;
+    gap: 1.5rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -79,7 +79,8 @@ img {
     right: 0;
     overflow: auto;
     color: var(--white);
-    font-family: 'Grandiflora One', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    /* font-family: 'Grandiflora One', serif; */
     /* font-family: 'Outfit', sans-serif; */
     /* font-family: 'Rubik', 'sans-serif'; */
     /* font-family: 'Zeyada', cursive; */
@@ -93,13 +94,14 @@ img {
     display: flex;
     justify-content: center;
     font-size: 4rem;
-    font-weight: 200;
+    font-weight: 700;
     /* margin-top: 2rem; */
+    letter-spacing: 2px;
     border-top: 2px dashed var(--blue);
     border-bottom: 2px dashed var(--blue);
     padding: 2rem;
     color: var(--blue);
-    font-weight: 200;
+    font-weight: 700;
 }
 
 .body-content h4 {
@@ -110,7 +112,7 @@ img {
     border-bottom: 2px dashed var(--blue);
     padding: 2rem;
     color: var(--blue);
-    font-weight: 200;
+    font-weight: 700;
 }
 
 .body-content h6 {
@@ -128,6 +130,13 @@ img {
 h4 a {
     text-decoration: none;
     color: var(--blue);
+}
+
+h4:hover {
+    background-color: var(--blue);
+    color: var(--gray);
+    border-top: 2px dashed var(--gray);
+    border-bottom: 2px dashed var(--gray);
 }
 
 a:hover {
@@ -193,27 +202,47 @@ a {
 }
 
 h4.work-text {
-    border-top: none;
-    border-bottom: none;
+    border-top: 2px dashed var(--blue);
+    border-bottom: 2px dashed var(--blue);
     width: 60%;
     text-align: right;
-    letter-spacing: 1pxpx;
+    letter-spacing: 1px;
     line-height: 28px;
     position: relative;
     color: var(--blue);
 }
 
+h4.work-text:hover {
+    background-color: var(--blue);
+    color: var(--gray);
+    border-top: 2px dashed var(--gray);
+    border-bottom: 2px dashed var(--gray);
+}
+
+h4.my-work:hover {
+    background-color: var(--blue);
+}
+
+h4.my-work:hover a {
+    color: var(--gray);
+
+}
+
+h4.my-work a:hover {
+    color: var(--white);
+}
 
 
 /* Mobile  */
 
-@media (max-width: 435px) {
+@media (max-width: 540px) {
 
     div.body-content {
         display: flex;
         justify-content: start;
         margin-top: 5rem;
         gap: .5rem;
+        font-weight: 400;
     }
 
     div.body-content h2 {
@@ -222,6 +251,7 @@ h4.work-text {
 
     div.body-content h4 {
         font-size: 1.1rem;
+        color: var(--blue);
     }
 
     div.body-content a {
@@ -232,16 +262,8 @@ h4.work-text {
         border-top: 2px dashed var(--blue);
         border-bottom: 2px dashed var(--blue);
         width: 70%;
-        letter-spacing: 1.5px;
-
-    }
-
-    div.home {
-        width: 32px;
-        height: 32px;
-    }
-
-    div.home span {
         font-size: 1.3rem;
+
     }
+
 }
