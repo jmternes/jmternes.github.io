@@ -197,7 +197,7 @@ h4.work-text {
     border-bottom: none;
     width: 60%;
     text-align: right;
-    letter-spacing: 2px;
+    letter-spacing: 1pxpx;
     line-height: 28px;
     position: relative;
     color: var(--blue);
