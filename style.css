@@ -208,21 +208,40 @@ h4.work-text {
 /* Mobile  */
 
 @media (max-width: 435px) {
-div.body-content {
-    display: flex;
-    justify-content: start;
-    margin-top: 5rem;
-}
+
+    div.body-content {
+        display: flex;
+        justify-content: start;
+        margin-top: 5rem;
+        gap: .5rem;
+    }
 
     div.body-content h2 {
         font-size: 2.3rem;
     }
 
     div.body-content h4 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     div.body-content a {
         color: white;
+    }
+
+    h4.work-text {
+        border-top: 2px dashed var(--blue);
+        border-bottom: 2px dashed var(--blue);
+        width: 70%;
+        letter-spacing: 1.5px;
+
+    }
+
+    div.home {
+        width: 32px;
+        height: 32px;
+    }
+
+    div.home span {
+        font-size: 1.3rem;
     }
 }
