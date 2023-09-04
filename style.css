@@ -135,8 +135,7 @@ h4 a {
 h4:hover {
     background-color: var(--blue);
     color: var(--gray);
-    border-top: 2px dashed var(--gray);
-    border-bottom: 2px dashed var(--gray);
+    border: 2px dashed var(--gray);
 }
 
 a:hover {
@@ -150,9 +149,9 @@ a:hover {
     justify-content: center;
     align-items: center;
     top: 2rem;
-    left: 2rem;
-    width: 60px;
-    height: 60px;
+    left: 1rem;
+    width: 90px;
+    height: 90px;
     border: 3px dashed var(--blue);
     border-radius: 50%;
     cursor: pointer;
@@ -166,7 +165,7 @@ a:hover {
 }
 
 .home span {
-    font-size: 32px;
+    font-size: 3rem;
 }
 
 .home:hover {
@@ -215,21 +214,69 @@ h4.work-text {
 h4.work-text:hover {
     background-color: var(--blue);
     color: var(--gray);
-    border-top: 2px dashed var(--gray);
-    border-bottom: 2px dashed var(--gray);
+    border: 2px dashed var(--gray);
+}
+
+h4.tech-text:hover {
+    color: var(--white);
 }
 
 h4.my-work:hover {
     background-color: var(--blue);
+    color: var(--white);
 }
 
 h4.my-work:hover a {
-    color: var(--gray);
+    color: var(--white);
 
 }
 
 h4.my-work a:hover {
     color: var(--white);
+}
+
+h5.resumetext {
+    display: none;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.resume:hover h5 {
+    display: flex;
+    justify-content: center;
+}
+
+.resume {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 2rem;
+    left: 1rem;
+    width: 90px;
+    height: 90px;
+    border: 3px dashed var(--blue);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.resume span {
+    font-size: 3rem;
+    color: var(--blue);
+}
+
+.resume:hover {
+    transform: rotateZ(360deg);
+    transition: .8s;
+    background-color: var(--blue);
+    border: 3px dashed var(--gray);
+}
+
+.resume:hover span {
+    display: none;
 }
 
 
@@ -266,4 +313,34 @@ h4.my-work a:hover {
 
     }
 
+    h4.bottom-row-work {
+        width: 30%;
+    }
+    
+
+    div.home {
+        width: 60px;
+        height: 60px;
+    }
+
+    div.home span {
+        font-size: 2.2rem;
+    }
+
+    div.resume {
+        width: 60px;
+        height: 60px;
+    }
+
+    div.resume span {
+        font-size: 2.2rem;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+    h4.bottom-row-work {
+        width: 60%;
+    }
 }
