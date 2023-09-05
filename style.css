@@ -48,18 +48,59 @@ body {
     justify-content: center;
 }
 
- p {
-    margin: 0;
-    font-size: 2rem;
+ p.work-text {
+    margin: 2rem;
+    font-size: 1.2rem;
     font-weight: 400;
-    font-family: 'Zeyada', cursive;
+    font-family: 'Nanum Myeongjo', serif;
     color: var(--blue);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     position: absolute;
-    bottom: 5rem;
+    top: 17%;
+    line-height: 2.5rem;
+    text-align: left;
  }
+
+ div.work-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem; /* Adjust the gap as needed */
+    position: absolute;
+    bottom: 3rem;
+  }
+
+  div.work-container p {
+      color: var(--white);
+      text-align: center;
+      font-family: 'Nanum Myeongjo', serif;
+      display: none;
+  }
+  
+  div.project {
+    width: 100%;
+    height: 150px;
+    border: 1px solid white;
+    background-color: lightgray;
+    cursor: pointer;
+  }
+  
+  div.project img {
+      width: 100%;
+      height: 100%;
+  }
+
+  .project:hover img {
+    filter: blur(3px);
+  }
+
+  .project:hover p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
 
 img {
     width: 100px;
@@ -235,6 +276,10 @@ h4.my-work a:hover {
     color: var(--white);
 }
 
+h4.tech-text:hover {
+    pointer-events: none;
+}
+
 h5.resumetext {
     display: none;
     font-family: 'Nanum Myeongjo', serif;
@@ -301,16 +346,25 @@ h5.resumetext {
         color: var(--blue);
     }
 
+    div.body-content h4:hover {
+        pointer-events: none;
+    }
+
     div.body-content a {
         color: white;
     }
 
-    h4.work-text {
+    p.work-text {
         border-top: 2px dashed var(--blue);
         border-bottom: 2px dashed var(--blue);
-        width: 70%;
-        font-size: 1.3rem;
+        font-size: .8rem;
+        position: absolute;
+        top: 5%;
 
+    }
+
+    div.my-work:hover {
+        color: white;
     }
 
     h4.bottom-row-work {
@@ -327,13 +381,27 @@ h5.resumetext {
         font-size: 2.2rem;
     }
 
+    div.home:hover {
+        pointer-events: none;
+    }
+
     div.resume {
         width: 60px;
         height: 60px;
     }
 
     div.resume span {
-        font-size: 2.2rem;
+        display: none;
+    }
+
+    h5.resumetext {
+        display: flex;
+        color: var(--blue);
+        font-size: .8rem;
+    }
+
+    div.resume:hover {
+        pointer-events: none;
     }
 
 }
