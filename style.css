@@ -50,7 +50,7 @@ body {
 
  p.work-text {
     margin: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 400;
     font-family: 'Nanum Myeongjo', serif;
     color: var(--blue);
@@ -59,7 +59,7 @@ body {
     justify-content: start;
     position: absolute;
     top: 17%;
-    line-height: 2.5rem;
+    line-height: 3rem;
     text-align: left;
     margin-bottom: 2rem;
  }
@@ -78,7 +78,7 @@ body {
       font-family: 'Nanum Myeongjo', serif;
       display: none;
   }
-  
+
   div.project {
     width: 100%;
     height: 150px;
@@ -86,7 +86,7 @@ body {
     background-color: lightgray;
     cursor: pointer;
   }
-  
+
   div.project img {
       width: 100%;
       height: 100%;
@@ -101,7 +101,7 @@ body {
       justify-content: center;
       align-items: center;
   }
-  
+
 
 img {
     width: 100px;
@@ -366,6 +366,7 @@ h5.resumetext {
         position: absolute;
         top: 12%;
         margin-bottom: 2rem;
+        line-height: 2.1rem;
     }
 
     div.my-work:hover {
@@ -375,7 +376,7 @@ h5.resumetext {
     h4.bottom-row-work {
         width: 30%;
     }
-    
+
 
     div.home {
         width: 60px;
@@ -416,7 +417,7 @@ h5.resumetext {
         background-color: lightgray;
         cursor: pointer;
         margin-bottom: 1rem;
-
+        /* margin-top: 2rem; */
       }
 
     div.work-container {
@@ -426,9 +427,9 @@ h5.resumetext {
         gap: 4rem; /* Adjust the gap as needed */
         position: absolute;
         pointer-events: none;
-        top: 60%;
+        top: 55%;
     }
-    
+
     div.work-container p {
         color: var(--white);
         text-align: center;
@@ -450,7 +451,7 @@ h5.resumetext {
 }
 
 @media screen and (min-width: 541px) and (max-width: 1280px) {
-    
+
     div.project {
         width: 100%;
         height: 100px;
@@ -463,14 +464,14 @@ h5.resumetext {
 
     div.work-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 50%;
+        grid-template-columns: repeat(3, 1fr);
+        width: 70%;
         gap: 4rem; /* Adjust the gap as needed */
         position: absolute;
         pointer-events: none;
-        top: 60%;
+        top: 50%;
     }
-    
+
     div.work-container p {
         color: var(--white);
         text-align: center;
@@ -484,5 +485,6 @@ h5.resumetext {
         font-size: 1rem;
         position: absolute;
         top: 15%;
+        line-height: 2rem;
     }
 }
