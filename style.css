@@ -50,7 +50,7 @@ body {
 
  p.work-text {
     margin: 2rem;
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     font-weight: 400;
     font-family: 'Nanum Myeongjo', serif;
     color: var(--blue);
@@ -90,10 +90,12 @@ body {
   div.project img {
       width: 100%;
       height: 100%;
+    filter: blur(1px);
+
   }
 
   .project:hover img {
-    filter: blur(3px);
+    filter: blur(0);
   }
 
   .project:hover p {
@@ -452,9 +454,15 @@ h5.resumetext {
 
 @media screen and (min-width: 541px) and (max-width: 1280px) {
 
+    body {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+
     div.project {
-        width: 100%;
-        height: 100px;
+        width: 400px;
+        height: 200px;
         border: 1px solid white;
         background-color: lightgray;
         cursor: pointer;
@@ -463,28 +471,57 @@ h5.resumetext {
       }
 
     div.work-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 70%;
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 100%;
         gap: 4rem; /* Adjust the gap as needed */
-        position: absolute;
-        pointer-events: none;
-        top: 50%;
+        position: relative;
+        /* pointer-events: none; */
+        margin-top: 4rem;
     }
 
     div.work-container p {
         color: var(--white);
         text-align: center;
         font-family: 'Nanum Myeongjo', serif;
-        display: inline-block;
+        display: flex;
+        justify-content: center;
     }
 
     p.work-text {
-        border-top: 2px dashed var(--blue);
-        border-bottom: 2px dashed var(--blue);
+        /* border-top: 2px dashed var(--blue);
+        border-bottom: 2px dashed var(--blue); */
         font-size: 1rem;
-        position: absolute;
+        position: relative;
         top: 15%;
         line-height: 2rem;
+    }
+
+    div.home {
+        width: 60px;
+        height: 60px;
+    }
+
+    div.home span {
+        font-size: 2rem;
+
+    }
+
+    div.resume {
+        width: 60px;
+        height: 60px;
+    }
+
+    div.resume span {
+        font-size: 2rem;
+    }
+
+    h5.resumetext {
+        font-size: .8rem;
     }
 }
