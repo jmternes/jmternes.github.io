@@ -609,26 +609,12 @@ h5.resumetext {
        position: relative;
     }
 
-    div.home {
-        width: 60px;
-        height: 60px;
-    }
-
-    div.home span {
-        font-size: 2rem;
-
-    }
-
-    div.resume {
-        width: 60px;
-        height: 60px;
-    }
-
-    div.resume span {
-        font-size: 2rem;
-    }
-
     h5.resumetext {
-        font-size: .8rem;
+        font-size: 1rem;
     }
+
+    div.top-section {
+        margin-bottom: 3rem;
+    }
+
 }
