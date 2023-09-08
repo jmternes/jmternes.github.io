@@ -48,6 +48,20 @@ body {
     justify-content: center;
 }
 
+div.work-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div.work-text-wrapper p {
+    display: flex;
+}
+
  p.work-text {
     margin: 2rem;
     font-size: 1.1rem;
@@ -58,18 +72,32 @@ body {
     align-items: start;
     justify-content: start;
     position: absolute;
-    top: 17%;
+    top: 20%;
     line-height: 3rem;
     text-align: left;
+    text-indent: 40px;
     margin-bottom: 2rem;
  }
 
+ p.noindent {
+     text-indent: 0px;
+     text-align: center;
+     margin: 2rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: 'Nanum Myeongjo', serif;
+    color: var(--blue);
+    position: relative;
+ }
+
  div.work-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem; /* Adjust the gap as needed */
-    position: absolute;
-    bottom: 3rem;
+    display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 7rem;
+        position: relative;
+        top: 65%;
+        background: transparent;;
   }
 
   div.work-container p {
@@ -77,10 +105,11 @@ body {
       text-align: center;
       font-family: 'Nanum Myeongjo', serif;
       display: none;
+      
   }
 
   div.project {
-    width: 100%;
+    width: auto;
     height: 150px;
     border: 1px solid white;
     background-color: lightgray;
@@ -362,14 +391,15 @@ h5.resumetext {
     }
 
     p.work-text {
-        border-top: 2px dashed var(--blue);
-        border-bottom: 2px dashed var(--blue);
-        font-size: .8rem;
+        /* border-top: 2px dashed var(--blue);
+        border-bottom: 2px dashed var(--blue); */
+        font-size: 1rem;
         position: absolute;
         top: 12%;
-        margin-bottom: 2rem;
-        line-height: 2.1rem;
+        line-height: 2.5rem;
     }
+
+  
 
     div.my-work:hover {
         color: white;
@@ -416,20 +446,27 @@ h5.resumetext {
         width: 100%;
         height: 75px;
         border: 1px solid white;
-        background-color: lightgray;
+        background: transparent;
         cursor: pointer;
         margin-bottom: 1rem;
+        object-fit: cover;
+        border: none;
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         /* margin-top: 2rem; */
       }
 
     div.work-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 70%;
-        gap: 4rem; /* Adjust the gap as needed */
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 7rem;
         position: absolute;
-        pointer-events: none;
-        top: 55%;
+        /* pointer-events: none; */
+        top: 65%;
+        /* margin-top: 2rem; */
     }
 
     div.work-container p {
@@ -437,6 +474,14 @@ h5.resumetext {
         text-align: center;
         font-family: 'Nanum Myeongjo', serif;
         display: flex;
+        margin: .75rem;
+        width: fit-content;
+    }
+
+    div.project img {
+        filter: none;
+        height: 160px;
+        width: auto;
     }
 
 }
@@ -493,13 +538,26 @@ h5.resumetext {
         justify-content: center;
     }
 
+    
+
     p.work-text {
         /* border-top: 2px dashed var(--blue);
         border-bottom: 2px dashed var(--blue); */
-        font-size: 1rem;
+        font-size: 1.5rem;
         position: relative;
         top: 15%;
-        line-height: 2rem;
+        line-height: 2.5rem;
+    }
+
+    p.noindent {
+        text-indent: 0px;
+        text-align: center;
+        margin: 2rem;
+       font-size: 1.5rem;
+       font-weight: 400;
+       font-family: 'Nanum Myeongjo', serif;
+       color: var(--blue);
+       position: relative;
     }
 
     div.home {
