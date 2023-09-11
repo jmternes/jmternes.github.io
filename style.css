@@ -116,73 +116,6 @@ div.work-text-wrapper p {
     text-align: center;
     margin-top: .5rem;
 }
-
-
- p.work-text {
-    margin: 2rem;
-    font-size: 1.1rem;
-    font-weight: 400;
-    font-family: 'Nanum Myeongjo', serif;
-    color: var(--blue);
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    position: absolute;
-    top: 20%;
-    line-height: 3rem;
-    text-align: left;
-    text-indent: 40px;
-    margin-bottom: 2rem;
- }
-
- div.work-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 7rem;
-    margin: 3rem;
-    margin-bottom: 3rem;
-
-    position: absolute;
-    top: 65%;
-    background: transparent;
-  }
-
-  div.work-container p {
-      color: var(--white);
-      text-align: center;
-      font-family: 'Nanum Myeongjo', serif;
-      display: none;
-      
-  }
-
-  div.project {
-    width: auto;
-    height: 150px;
-    border: 1px solid white;
-    background-color: lightgray;
-    cursor: pointer;
-  }
-
-  div.project img {
-      width: 100%;
-      height: 100%;
-    filter: blur(1px);
-
-  }
-
-  .project:hover img {
-    filter: blur(0);
-  }
-
-  .project:hover p {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-
-
 img {
     width: 100px;
     height: 100px;
@@ -253,12 +186,6 @@ h4 a {
     text-decoration: none;
     color: var(--blue);
 }
-
-/* h4:hover {
-    background-color: var(--blue);
-    color: var(--gray);
-    border: 2px dashed var(--gray);
-} */
 
 .body-content a:hover {
     color: var(--blue);
@@ -439,26 +366,6 @@ h5.resumetext {
         color: white;
     }
 
-    p.work-text {
-        /* border-top: 2px dashed var(--blue);
-        border-bottom: 2px dashed var(--blue); */
-        font-size: 1rem;
-        position: absolute;
-        top: 12%;
-        line-height: 2.5rem;
-    }
-
-  
-
-    div.my-work:hover {
-        color: white;
-    }
-
-    h4.bottom-row-work {
-        width: 30%;
-    }
-
-
     div.home {
         width: 60px;
         height: 60px;
@@ -491,48 +398,6 @@ h5.resumetext {
         pointer-events: none;
     }
 
-    div.project {
-        width: 100%;
-        height: 75px;
-        border: 1px solid white;
-        background: transparent;
-        cursor: pointer;
-        margin-bottom: 1rem;
-        object-fit: cover;
-        border: none;
-        margin: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* margin-top: 2rem; */
-      }
-
-    div.work-container {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        gap: 7rem;
-        position: absolute;
-        /* pointer-events: none; */
-        top: 65%;
-        /* margin-top: 2rem; */
-    }
-
-    div.work-container p {
-        color: var(--white);
-        text-align: center;
-        font-family: 'Nanum Myeongjo', serif;
-        display: flex;
-        margin: .75rem;
-        width: fit-content;
-    }
-
-    div.project img {
-        filter: none;
-        height: 160px;
-        width: auto;
-    }
-
 }
 
 /* END MOBILE */
@@ -552,61 +417,6 @@ h5.resumetext {
         display: flex;
         flex-direction: column;
         margin-top: 5rem;
-    }
-
-    div.project {
-        width: 400px;
-        height: 200px;
-        border: 1px solid white;
-        background-color: lightgray;
-        cursor: pointer;
-        margin-bottom: 1rem;
-
-      }
-
-    div.work-container {
-        /* display: grid;
-        grid-template-columns: repeat(2, 1fr); */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: nowrap;
-        width: 100%;
-        gap: 4rem; /* Adjust the gap as needed */
-        position: relative;
-        /* pointer-events: none; */
-        margin-top: 4rem;
-    }
-
-    div.work-container p {
-        color: var(--white);
-        text-align: center;
-        font-family: 'Nanum Myeongjo', serif;
-        display: flex;
-        justify-content: center;
-    }
-
-    
-
-    p.work-text {
-        /* border-top: 2px dashed var(--blue);
-        border-bottom: 2px dashed var(--blue); */
-        font-size: 1.5rem;
-        position: relative;
-        top: 15%;
-        line-height: 2.5rem;
-    }
-
-    p.noindent {
-        text-indent: 0px;
-        text-align: center;
-        margin: 2rem;
-       font-size: 1.5rem;
-       font-weight: 400;
-       font-family: 'Nanum Myeongjo', serif;
-       color: var(--blue);
-       position: relative;
     }
 
     h5.resumetext {
