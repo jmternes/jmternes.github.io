@@ -86,6 +86,10 @@ div.work-text-wrapper p {
     letter-spacing: 1.3px;
 }
 
+.work-content {
+    display: none;
+}
+
 .image-container {
     display: flex;
     flex-wrap: wrap;
