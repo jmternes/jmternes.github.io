@@ -86,8 +86,30 @@ div.work-text-wrapper p {
     letter-spacing: 1.3px;
 }
 
-.work-content {
+.work-wrapper {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 10rem;
+}
+
+.back-button {
+    position: absolute;
+            top: 40px;
+            right: 40px;
+            padding: 10px 20px;
+            background-color: var(--gray);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+            font-size: 48px;
+}
+
+.back-button:hover {
+    background-color: var(--white);
+    color: var(--gray);
 }
 
 .image-container {
@@ -100,7 +122,7 @@ div.work-text-wrapper p {
 
 .image-item {
     margin: 1rem;
-    
+
 }
 
 .image-item img {

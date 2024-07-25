@@ -38,28 +38,48 @@
     <!-- when this is clicked, let's hide the div body-content, and reveal my work div. build that below -->
   </div>
 
-  <div class="work-content">
-    
-<div class="image-container">
-  <div class="image-item">
-    <a href="https://github.com/jmternes/web" target="_blank"><img src="./portfoliosite/images/boredlessgamesShot.png" alt="Game Finder App"></a>
-    <div class="caption">Game Finder App - HTML / CSS / JS</div>
-  </div>
-  <div class="image-item">
-    <a href="https://github.com/jmternes/web" target="_blank"><img src="./portfoliosite/images/hogballscreenshot.png" alt="Basketball Team Website"></a>
-    <div class="caption">Razorback Basketball Hub - HTML / CSS / JS</div></div>
-  <div class="image-item">
-    <a href="https://github.com/jmternes/C-Sharp-Live-Project" target="_blank"><img src="./portfoliosite/images/Csharpscreenshot.png" alt="Theater Admin App"></a>
-    <div class="caption">Theater MVC App - HTML / CSS / C# / .NET</div></div>
-  <div class="image-item">
-    <a href="https://github.com/jmternes/nba_map" target="_blank"><img src="./portfoliosite/images/nbamap.png" alt="NBA Hometowns Map"></a>
-    <div class="caption">NBA Players' Hometowns Map - HTML / CSS / JS</div></div>
-  <div class="image-item">
-    <a href="https://github.com/jmternes/web" target="_blank"><img src="./portfoliosite/images/nbascreenshot.png" alt="Random NBA Team Generator"></a>
-    <div class="caption">Random NBA Team Generator - HTML / CSS / JS</div></div>
-  <div class="image-item"><img src="./portfoliosite/images/boredlessgamesShot.png" alt="Image 6"></div>
+  <div class="work-wrapper">
+    <div class="work-content">
+        <div class="image-container">
+            <div class="image-item">
+                <a href="https://github.com/jmternes/web" target="_blank"><img src="./portfoliosite/images/boredlessgamesShot.png" alt="Game Finder App"></a>
+                <div class="caption">Game Finder App - HTML / CSS / JS</div>
+            </div>
+            <div class="image-item">
+                <a href="https://github.com/jmternes/web" target="_blank"><img src="./portfoliosite/images/hogballscreenshot.png" alt="Basketball Team Website"></a>
+                <div class="caption">Razorback Basketball Hub - HTML / CSS / JS</div>
+            </div>
+            <div class="image-item">
+                <a href="https://github.com/jmternes/C-Sharp-Live-Project" target="_blank"><img src="./portfoliosite/images/Csharpscreenshot.png" alt="Theater Admin App"></a>
+                <div class="caption">Theater MVC App - HTML / CSS / C# / .NET</div>
+            </div>
+            <div class="image-item">
+                <a href="https://github.com/jmternes/nba_map" target="_blank"><img src="./portfoliosite/images/nbamap.png" alt="NBA Hometowns Map"></a>
+                <div class="caption">NBA Players' Hometowns Map - HTML / CSS / JS</div>
+            </div>
+            <div class="image-item">
+                <a href="https://github.com/jmternes/web" target="_blank"><img src="./portfoliosite/images/nbascreenshot.png" alt="Random NBA Team Generator"></a>
+                <div class="caption">Random NBA Team Generator - HTML / CSS / JS</div>
+            </div>
+            <div class="image-item">
+                <img src="./portfoliosite/images/boredlessgamesShot.png" alt="Image 6">
+            </div>
+        </div>
+        <button class="back-button"><span>&#8617</span></button>
+    </div>
 </div>
-  </div>
+
+<script>
+    document.querySelector('.my-work').addEventListener('click', function() {
+        document.querySelector('.body-content').style.display = 'none';
+        document.querySelector('.work-wrapper').style.display = 'flex';
+    });
+
+    document.querySelector('.back-button').addEventListener('click', function() {
+        document.querySelector('.work-wrapper').style.display = 'none';
+        document.querySelector('.body-content').style.display = 'flex';
+    });
+</script>
 
 </body>
 </html>
