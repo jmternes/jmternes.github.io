@@ -95,6 +95,10 @@ div.work-text-wrapper p {
     margin-top: 10rem;
 }
 
+.work-header {
+    color: var(--white);
+}
+
 .back-button {
     position: absolute;
             top: 40px;
