@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Hello;</h1>
+            <p>I'm John Michael.</p>
+            <button class="scroll-down">&#8595;</button>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I build websites that look good and perform better. I'm a passionate lifelong learner. I have a keen interest in sports data analysis and sports technology, combining my love for sports.
+            <button class="scroll-down">&#8595;</button>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Boredless Games</h3>
+                <p>A robust web app with search, filter, and sort functionality to browse a database of games.</p>
+            </div>
+            <div class="project">
+                <h3>Project Title</h3>
+                <p>Project description.</p>
+            </div>
+            <button class="scroll-down">&#8595;</button>
+        </section>
+        <section id="contact">
+            <h2>I'm Easy to Find</h2>
+            <ul class="contactlist">
+                <li>Email</li>
+                <li>Github</li>
+                <li>LinkedIn</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.scroll-down').forEach(button => {
+            button.addEventListener('click', () => {
+                const nextSection = button.closest('section').nextElementSibling;
+                if (nextSection) {
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
