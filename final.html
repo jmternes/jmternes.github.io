@@ -23,7 +23,7 @@
                     About Me
                 </div>
                 <div class="dropdown-content" id="about-content">
-                    <p>I'm a builder of web things. I like building. I like learning. I like the opportunity it gives me to build things I'm passionate about, like sports, games, etc.</p>
+                    <p>I'm a builder of web things. I like building. I like learning. I like the opportunity it gives me to build things I'm passionate about, like sports, games, etc.  learning. I like the opportunity it gives me to build things I'm passionate about, like sports, games, etc. learning. I like the opportunity it gives me to build things I'm passionate about, like sports, games, etc.</p>
                 </div>
             </div>
             <div class="dropdown">
@@ -31,7 +31,10 @@
                     My Work
                 </div>
                 <div class="dropdown-content" id="work-content">
-                    <p>jects here more projects ljalsdkfjakk falkfjla alkdfj;la fkasjdlfjProjects here more projects ljalsdkfjakk falkfjla alkdfj;la fkasjdlfjProjects here more projects ljalsdkfjakk falkfjla alkdfj;la fkasjdlfjProjects here more projects ljalsdkfjakk falkfjla alkdfj;la fkasjdlfjProjects here more projects ljalsdkfjakk falkfjla alkdfj;la fkasjdlfj</p>
+                    <div class="projectItem">Helllo</div>
+                    <div class="projectItem">Helllo</div>
+                    <div class="projectItem">Helllo</div>
+                    <div class="projectItem">Helllo</div><div class="projectItem">Helllo</div><div class="projectItem">Helllo</div><div class="projectItem">Helllo</div>
                 </div>
             </div>
             <div class="dropdown">
@@ -39,32 +42,15 @@
                     Contact
                 </div>
                 <div class="dropdown-content" id="contact-content">
-                    <p>Contact details...</p>
+                    <div class="contactLink"><a href="mailto:jmternes@gmail.com">jmternes@gmail.com</a></div>
+                    <div class="contactLink">github.com/jmternes</div>
+                    <div class="contactLink">resume?</div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-//         function toggleDropdown(openId) {
-//     const dropdowns = document.querySelectorAll('.dropdown-content');
-//     dropdowns.forEach((content) => {
-//         const header = content.previousElementSibling;
-//         if (content.id === openId) {
-//             if (content.style.maxHeight) {
-//                 content.style.maxHeight = null; // Collapse
-//                 header.classList.remove('active'); // Remove active class
-//             } else {
-//                 content.style.maxHeight = content.scrollHeight + "px"; // Expand
-//                 header.classList.add('active'); // Add active class
-//             }
-//         } else {
-//             content.style.maxHeight = null; // Collapse others
-//             header.classList.remove('active'); // Remove active class for others
-//         }
-//     });
-// }
-
 function toggleDropdown(openId) {
     const dropdowns = document.querySelectorAll('.dropdown');
     const activeContent = document.getElementById(openId);
@@ -74,51 +60,62 @@ function toggleDropdown(openId) {
         const content = dropdown.querySelector('.dropdown-content');
 
         if (content.id === openId) {
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null; // Collapse
+            if (header.classList.contains('active')) {
+                // Collapse the active dropdown
+                content.style.maxHeight = null; // Collapse content
                 header.classList.remove('active'); // Remove active class
-                content.style.padding = '0 15px'; // Reset padding
+                dropdown.classList.remove('active-dropdown'); // Remove active dropdown class
+                dropdown.classList.remove('move-to-top'); // Reset class
+                showAllHeaders(); // Show all headers
             } else {
-                content.style.maxHeight = content.scrollHeight + "px"; // Expand
+                // Expand the active dropdown
+                content.style.maxHeight = document.querySelector('.right-section').scrollHeight - header.scrollHeight + "px"; // Make content area full height
                 header.classList.add('active'); // Add active class
-                content.style.padding = '15px'; // Add padding for content
+                dropdown.classList.add('active-dropdown'); // Add active dropdown class
+                hideOtherHeaders(openId); // Hide other headers
 
-                // Increase height for the active dropdown
-                if (openId === 'work-content') {
-                    content.style.maxHeight = (content.scrollHeight + 50) + "px"; // Add 50px extra space
-                } else if (openId === 'about-content') {
-                    content.style.maxHeight = (content.scrollHeight + 100) + "px"; // Add 100px extra space
-                } else if (openId === 'contact-content') {
-                    content.style.maxHeight = (content.scrollHeight + 50) + "px"; // Add 50px extra space
-                }
+                // Add transition to slide the header up
+                setTimeout(() => {
+                    dropdown.classList.add('move-to-top'); // Add class to move to top
+                }, 50); // Slight delay to ensure smooth transition
             }
         } else {
-            content.style.maxHeight = null; // Collapse others
-            header.classList.remove('active'); // Remove active class for others
-            content.style.padding = '0 15px'; // Reset padding for others
+            content.style.maxHeight = null; // Collapse other contents
+            header.classList.remove('active'); // Remove active class from others
+            dropdown.classList.remove('active-dropdown'); // Remove active dropdown class from others
+            dropdown.classList.remove('move-to-top'); // Reset class
         }
     });
-
-    adjustDropdownPositions(openId);
 }
 
-function adjustDropdownPositions(openId) {
+function hideOtherHeaders(activeId) {
     const dropdowns = document.querySelectorAll('.dropdown');
-    let previousHeight = 0;
 
-    dropdowns.forEach((dropdown, index) => {
+    dropdowns.forEach((dropdown) => {
+        const header = dropdown.querySelector('.dropdown-header');
         const content = dropdown.querySelector('.dropdown-content');
 
-        // Adjust the position of other dropdowns based on the active one
-        if (content.id === openId) {
-            dropdown.style.marginTop = previousHeight + "px"; // Set the margin for the active one
+        if (content.id !== activeId) {
+            header.style.display = 'none'; // Hide other headers
+            content.style.display = 'none'; // Ensure other contents are hidden
         } else {
-            dropdown.style.marginTop = "0"; // Reset margin for inactive ones
-            previousHeight = content.scrollHeight / 3; // Calculate previous height for adjustment
+            header.style.display = 'block'; // Ensure the active header is visible
+            content.style.display = 'block'; // Ensure the active content is visible
         }
     });
 }
 
+function showAllHeaders() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach((dropdown) => {
+        const header = dropdown.querySelector('.dropdown-header');
+        const content = dropdown.querySelector('.dropdown-content');
+
+        header.style.display = 'block'; // Show all headers
+        content.style.display = 'none'; // Hide all content
+    });
+}
 
     </script>
 </body>
