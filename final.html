@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styler.css">
 </head>
 <body>
     <div class="container">
         <div class="left-section">
-            <h1>Hello;</h1>
-            <h2>I'm John Michael</h2>
+            <h1>JMT;</h1>
+            <h2>Builder</h2>
+            <h2>Technologist</h2>
+            <h2>Sports Enthusiast</h2>
         </div>
         <div class="right-section">
             <div class="dropdown">
@@ -41,32 +46,80 @@
     </div>
 
     <script>
-        // function toggleDropdown(id) {
-        //     const content = document.getElementById(id);
-        //     if (content.style.maxHeight) {
-        //         content.style.maxHeight = null; // Collapse
-        //     } else {
-        //         content.style.maxHeight = content.scrollHeight + "px"; // Expand
-        //     }
-        // }
-        function toggleDropdown(openId) {
-            const dropdowns = document.querySelectorAll('.dropdown-content');
-            dropdowns.forEach((content) => {
-                const header = content.previousElementSibling;
-                if (content.id === openId) {
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null; // Collapse
-                        header.style.height = "50px"; // Reset header height
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px"; // Expand
-                        header.style.height = "30px"; // Adjust header height
-                    }
-                } else {
-                    content.style.maxHeight = null; // Collapse others
-                    header.style.height = "50px"; // Reset header height for others
+//         function toggleDropdown(openId) {
+//     const dropdowns = document.querySelectorAll('.dropdown-content');
+//     dropdowns.forEach((content) => {
+//         const header = content.previousElementSibling;
+//         if (content.id === openId) {
+//             if (content.style.maxHeight) {
+//                 content.style.maxHeight = null; // Collapse
+//                 header.classList.remove('active'); // Remove active class
+//             } else {
+//                 content.style.maxHeight = content.scrollHeight + "px"; // Expand
+//                 header.classList.add('active'); // Add active class
+//             }
+//         } else {
+//             content.style.maxHeight = null; // Collapse others
+//             header.classList.remove('active'); // Remove active class for others
+//         }
+//     });
+// }
+
+function toggleDropdown(openId) {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const activeContent = document.getElementById(openId);
+
+    dropdowns.forEach((dropdown) => {
+        const header = dropdown.querySelector('.dropdown-header');
+        const content = dropdown.querySelector('.dropdown-content');
+
+        if (content.id === openId) {
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null; // Collapse
+                header.classList.remove('active'); // Remove active class
+                content.style.padding = '0 15px'; // Reset padding
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px"; // Expand
+                header.classList.add('active'); // Add active class
+                content.style.padding = '15px'; // Add padding for content
+
+                // Increase height for the active dropdown
+                if (openId === 'work-content') {
+                    content.style.maxHeight = (content.scrollHeight + 50) + "px"; // Add 50px extra space
+                } else if (openId === 'about-content') {
+                    content.style.maxHeight = (content.scrollHeight + 100) + "px"; // Add 100px extra space
+                } else if (openId === 'contact-content') {
+                    content.style.maxHeight = (content.scrollHeight + 50) + "px"; // Add 50px extra space
                 }
-            });
+            }
+        } else {
+            content.style.maxHeight = null; // Collapse others
+            header.classList.remove('active'); // Remove active class for others
+            content.style.padding = '0 15px'; // Reset padding for others
         }
+    });
+
+    adjustDropdownPositions(openId);
+}
+
+function adjustDropdownPositions(openId) {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    let previousHeight = 0;
+
+    dropdowns.forEach((dropdown, index) => {
+        const content = dropdown.querySelector('.dropdown-content');
+
+        // Adjust the position of other dropdowns based on the active one
+        if (content.id === openId) {
+            dropdown.style.marginTop = previousHeight + "px"; // Set the margin for the active one
+        } else {
+            dropdown.style.marginTop = "0"; // Reset margin for inactive ones
+            previousHeight = content.scrollHeight / 3; // Calculate previous height for adjustment
+        }
+    });
+}
+
+
     </script>
 </body>
 </html>
