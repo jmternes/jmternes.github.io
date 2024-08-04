@@ -36,7 +36,7 @@ body {
 .left-section {
     flex: 0.5;
     padding: 12px;
-    border-right: 2px solid var(--white-lavender);
+    border-right: 1px solid var(--white-lavender);
     background-color: var(--dark-gray);
 }
 
@@ -50,6 +50,8 @@ body {
 .left-section h2 {
     font-size: 2em;
     color: var(--light-lavender);
+    opacity: 0; /* Start invisible */
+    transition: opacity 1s ease-in-out; /* Smooth transition for fade effect */
 }
 
 .right-section {

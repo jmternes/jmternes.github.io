@@ -13,9 +13,7 @@
     <div class="container">
         <div class="left-section">
             <h1>JMT;</h1>
-            <h2>Builder</h2>
-            <h2>Technologist</h2>
-            <h2>Sports Enthusiast</h2>
+            <h2 id="dynamic-word">Builder</h2>
         </div>
         <div class="right-section">
             <div class="dropdown">
@@ -51,6 +49,7 @@
     </div>
 
     <script>
+
 function toggleDropdown(openId) {
     const dropdowns = document.querySelectorAll('.dropdown');
     const activeContent = document.getElementById(openId);
@@ -116,6 +115,37 @@ function showAllHeaders() {
         content.style.display = 'none'; // Hide all content
     });
 }
+
+// JavaScript to handle rotating words
+const words = ["Builder", "Technologist", "Sports Enthusiast", "Innovator", "Developer"];
+let currentWordIndex = 0;
+const wordElement = document.getElementById("dynamic-word");
+
+function rotateWords() {
+    // Fade out the current word
+    wordElement.style.opacity = 0;
+
+    // Wait for the fade-out transition to complete
+    setTimeout(() => {
+        // Update the word
+        currentWordIndex = (currentWordIndex + 1) % words.length;
+        wordElement.textContent = words[currentWordIndex];
+
+        // Fade in the new word
+        wordElement.style.opacity = 1;
+    }, 900); // Adjust time to match CSS transition duration
+}
+
+// Rotate words every 3 seconds
+setInterval(rotateWords, 2700);
+
+// Initial fade-in
+window.onload = () => {
+    wordElement.style.opacity = 1;
+};
+
+
+
 
     </script>
 </body>
