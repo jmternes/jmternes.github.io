@@ -1,71 +1,112 @@
-// scripts.js
-
-document.addEventListener("DOMContentLoaded", function () {
-    const menuItems = document.querySelectorAll(".menu-item");
-    const contents = document.querySelectorAll(".content");
-    const menu = document.querySelector(".menu");
-    const menuContainer = document.querySelector(".menu-container");
-
-    menuItems.forEach((item) => {
-        item.addEventListener("click", () => {
-            // Hide all menu items except the selected one
-            menuItems.forEach(el => {
-                if (el !== item) {
-                    el.classList.add("menu-hidden");
-                }
-            });
-
-            // Hide all content sections
-            contents.forEach(content => {
-                content.classList.remove("active");
-            });
-
-            // Show the clicked item's content
-            const contentId = item.id + "Content";
-            document.getElementById(contentId).classList.add("active");
-
-            // Move the clicked menu item to the top center
-            item.style.top = "10%";
-            item.style.left = "50%";
-            item.style.transform = "translate(-50%, -50%)";
-
-            // Make the whole container clickable to return to the menu
-            menuContainer.classList.add("container-clickable");
-        });
-    });
-
-    // Add event listener to the container for returning to the main menu
-    menuContainer.addEventListener("click", (event) => {
-        // Check if we're in a state where we want to return to the main menu
-        if (menuContainer.classList.contains("container-clickable")) {
-            // Show all menu items
-            menuItems.forEach(el => {
-                el.classList.remove("menu-hidden");
-                // Reset the positioning
-                const originalPosition = el.id;
-                switch (originalPosition) {
-                    case "aboutMe":
-                        el.style.top = "20%";
-                        el.style.left = "30%";
-                        break;
-                    case "myWork":
-                        el.style.top = "20%";
-                        el.style.left = "70%";
-                        break;
-                    case "contact":
-                        el.style.top = "60%";
-                        el.style.left = "50%";
-                        break;
-                }
-            });
-
-            // Hide all content sections
-            contents.forEach(content => {
-                content.classList.remove("active");
-            });
-
-            // Remove the container-clickable class
-            menuContainer.classList.remove("container-clickable");
+// File#: _1_collapse
+// Usage: codyhouse.co/license
+(function() {
+    var Collapse = function(element) {
+      this.element = element;
+      this.triggers = document.querySelectorAll('[aria-controls="'+this.element.getAttribute('id')+'"]');
+      this.animate = this.element.getAttribute('data-collapse-animate') == 'on';
+      this.animating = false;
+      initCollapse(this);
+    };
+  
+    function initCollapse(element) {
+      if (element.triggers) {
+        // set initial 'aria-expanded' attribute for trigger elements
+        updateTriggers(element, !element.element.classList.contains('cj1-hide'));
+  
+        // detect click on trigger elements
+        for (let i = 0; i < element.triggers.length; i++) {
+          element.triggers[i].addEventListener('click', function(event) {
+            event.preventDefault();
+            toggleVisibility(element);
+          });
         }
-    });
-});
+      }
+  
+      // custom event
+      element.element.addEventListener('collapseToggle', function(event){
+        toggleVisibility(element);
+      });
+    };
+  
+    function toggleVisibility(element) {
+      var bool = element.element.classList.contains('cj1-hide');
+      if (element.animating) return;
+      element.animating = true;
+      animateElement(element, bool);
+      updateTriggers(element, bool);
+    };
+  
+    function animateElement(element, bool) {
+      // bool === true -> show content
+      if (!element.animate || !window.requestAnimationFrame) {
+        element.element.classList.toggle('cj1-hide', !bool);
+        element.animating = false;
+        return;
+      }
+  
+      // animate content height
+      element.element.classList.remove('cj1-hide');
+      var initHeight = !bool ? element.element.offsetHeight : 0,
+        finalHeight = !bool ? 0 : element.element.offsetHeight;
+  
+      element.element.classList.add('cj1-overflow-hidden');
+      
+      setHeight(initHeight, finalHeight, element.element, 200, function(){
+        if (!bool) element.element.classList.add('cj1-hide');
+        element.element.removeAttribute("style");
+        element.element.classList.remove('cj1-overflow-hidden');
+        element.animating = false;
+      }, easeInOutQuad); // use the easing function
+    };
+  
+    function updateTriggers(element, bool) {
+      for (let i = 0; i < element.triggers.length; i++) {
+        element.triggers[i].setAttribute('aria-expanded', bool ? 'true' : 'false');
+      };
+    };
+  
+    function setHeight(start, to, element, duration, cb, timeFunction) {
+      var change = to - start,
+        currentTime = null;
+  
+      var animateHeight = function(timestamp){  
+        if (!currentTime) currentTime = timestamp;         
+        var progress = timestamp - currentTime;
+        if (progress > duration) progress = duration;
+        var val = parseInt((progress / duration) * change + start);
+        if (timeFunction) {
+          val = timeFunction(progress, start, to - start, duration);
+        }
+        element.style.height = val + "px";
+        if (progress < duration) {
+          window.requestAnimationFrame(animateHeight);
+        } else {
+          if (cb) cb();
+        }
+      };
+  
+      // set the height of the element before starting animation -> fix bug on Safari
+      element.style.height = start + "px";
+      window.requestAnimationFrame(animateHeight);
+    };
+  
+    // Example easing function
+    function easeInOutQuad(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+  
+    window.Collapse = Collapse;
+  
+    // initialize the Collapse objects
+    var collapses = document.getElementsByClassName('js-collapse');
+    if (collapses.length > 0) {
+      for (let i = 0; i < collapses.length; i++) {
+        new Collapse(collapses[i]);
+      }
+    }
+  }());
+  
