@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
+    <title>JMT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -28,12 +28,46 @@
                 <div class="dropdown-header" onclick="toggleDropdown('work-content')">
                     My Work
                 </div>
+
                 <div class="dropdown-content" id="work-content">
-                    <div class="projectItem">Helllo</div>
-                    <div class="projectItem">Helllo</div>
-                    <div class="projectItem">Helllo</div>
-                    <div class="projectItem">Helllo</div><div class="projectItem">Helllo</div><div class="projectItem">Helllo</div><div class="projectItem">Helllo</div>
+                    <div class="projectItem" onclick="toggleDetails(this)">
+                        Boredless Games
+                        <div class="projectDetails">
+                            <p>Description: A platform for interactive games.</p>
+                            <p>Technologies: React, Node.js, MongoDB</p>
+                        </div>
+                    </div>
+                    <div class="projectItem" onclick="toggleDetails(this)">
+                        NBA Maps
+                        <div class="projectDetails">
+                            <p>Description: Visualizing NBA statistics with maps.</p>
+                            <p>Technologies: D3.js, Python</p>
+                        </div>
+                    </div>
+                    <div class="projectItem" onclick="toggleDetails(this)">
+                        Fourdle
+                        <div class="projectDetails">
+                            <p>Description: A challenging word puzzle game.</p>
+                            <p>Technologies: JavaScript, HTML, CSS</p>
+                        </div>
+                    </div>
+                    <div class="projectItem" onclick="toggleDetails(this)">
+                        C#/ASP.NET Project
+                        <div class="projectDetails">
+                            <p>Description: Web application built with ASP.NET.</p>
+                            <p>Technologies: C#, ASP.NET Core, SQL Server</p>
+                        </div>
+                    </div>
+                    <div class="projectItem" onclick="toggleDetails(this)">
+                        Hello
+                        <div class="projectDetails">
+                            <p>Description: Placeholder project.</p>
+                            <p>Technologies: HTML, CSS</p>
+                        </div>
+                    </div>
+                    <!-- <div id="projectDetailsContainer"></div> -->
                 </div>
+                
             </div>
             <div class="dropdown">
                 <div class="dropdown-header" onclick="toggleDropdown('contact-content')">
@@ -44,7 +78,10 @@
                     <div class="contactLink">github.com/jmternes</div>
                     <div class="contactLink">resume?</div>
                 </div>
+                
             </div>
+            <div id="projectDetailsContainer"></div>
+            <!-- when here, it stays in right section even when not active. fix this FIRST -->
         </div>
     </div>
 
@@ -99,7 +136,7 @@ function hideOtherHeaders(activeId) {
             content.style.display = 'none'; // Ensure other contents are hidden
         } else {
             header.style.display = 'block'; // Ensure the active header is visible
-            content.style.display = 'block'; // Ensure the active content is visible
+            content.style.display = 'flex'; // Ensure the active content is visible
         }
     });
 }
@@ -116,8 +153,8 @@ function showAllHeaders() {
     });
 }
 
-// JavaScript to handle rotating words
-const words = ["Builder", "Technologist", "Sports Enthusiast", "Innovator", "Developer"];
+// Rotating words
+const words = ["Builder", "Technologist", "Sports Enthusiast", "Innovator", "Developer", "Multipotentialite", "Solution Finder"];
 let currentWordIndex = 0;
 const wordElement = document.getElementById("dynamic-word");
 
@@ -133,16 +170,36 @@ function rotateWords() {
 
         // Fade in the new word
         wordElement.style.opacity = 1;
-    }, 900); // Adjust time to match CSS transition duration
+    }, 1000); // Adjust time to match CSS transition duration
 }
 
 // Rotate words every 3 seconds
-setInterval(rotateWords, 2700);
+setInterval(rotateWords, 3000);
 
 // Initial fade-in
 window.onload = () => {
     wordElement.style.opacity = 1;
 };
+
+
+// Function to toggle project details
+function toggleDetails(projectItem) {
+    // Get the project details from the clicked item
+    const projectDetails = projectItem.querySelector('.projectDetails').innerHTML;
+
+    // Get the container where details will be displayed
+    const detailsContainer = document.getElementById('projectDetailsContainer');
+
+    // Clear all existing details and add the new content
+    detailsContainer.innerHTML = projectDetails;
+
+    // Show the container with animation
+    detailsContainer.style.display = 'block';
+    detailsContainer.style.opacity = '1';
+    detailsContainer.style.maxHeight = '400px'; // Adjust as needed
+}
+
+
 
 
 
