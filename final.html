@@ -13,7 +13,7 @@
     <div class="container">
         <div class="left-section">
             <h1>JMT;</h1>
-            <h2 id="dynamic-word">Builder</h2>
+            <h2 id="dynamic-word">Creator</h2>
         </div>
         <div class="right-section">
             <div class="dropdown">
@@ -107,6 +107,7 @@ function toggleDropdown(openId) {
                 // Expand the active dropdown
                 content.style.maxHeight = document.querySelector('.right-section').scrollHeight - header.scrollHeight + "px"; // Make content area full height
                 header.classList.add('active'); // Add active class
+                console.log(`Active header: ${header.textContent}`); // Debugging log
                 dropdown.classList.add('active-dropdown'); // Add active dropdown class
                 hideOtherHeaders(openId); // Hide other headers
 
@@ -153,8 +154,9 @@ function showAllHeaders() {
     });
 }
 
+
 // Rotating words
-const words = ["Builder", "Technologist", "Sports Enthusiast", "Innovator", "Developer", "Multipotentialite", "Solution Finder"];
+const words = ["Web Developer;", "Data Analyst;", "Designer;", "Technologist;", "Sports Nerd", "Innovator;", "Builder;", "Multipotentialite;", "Solution Finder;"];
 let currentWordIndex = 0;
 const wordElement = document.getElementById("dynamic-word");
 
@@ -190,14 +192,47 @@ function toggleDetails(projectItem) {
     // Get the container where details will be displayed
     const detailsContainer = document.getElementById('projectDetailsContainer');
 
+    // Get all project items
+    const allProjectItems = document.querySelectorAll('.projectItem');
+
+    // Remove the active class from all project items
+    allProjectItems.forEach(item => item.classList.remove('active'));
+
+    // Add the active class to the clicked project item
+    projectItem.classList.add('active');
+
     // Clear all existing details and add the new content
     detailsContainer.innerHTML = projectDetails;
 
     // Show the container with animation
     detailsContainer.style.display = 'block';
     detailsContainer.style.opacity = '1';
-    detailsContainer.style.maxHeight = '400px'; // Adjust as needed
+    detailsContainer.style.maxHeight = '800px'; // Adjust as needed
 }
+
+// Function to close the project details container
+function closeDetails() {
+    const detailsContainer = document.getElementById('projectDetailsContainer');
+    const allProjectItems = document.querySelectorAll('.projectItem');
+
+    // Hide the container
+    detailsContainer.style.display = 'none';
+    detailsContainer.style.opacity = '0';
+    detailsContainer.style.maxHeight = '0';
+
+    // Remove the active class from all project items
+    allProjectItems.forEach(item => item.classList.remove('active'));
+}
+
+// Event listener for closing details when clicking outside
+document.addEventListener('click', function(event) {
+    const detailsContainer = document.getElementById('projectDetailsContainer');
+    const isClickInside = detailsContainer.contains(event.target) || event.target.classList.contains('projectItem');
+
+    if (!isClickInside) {
+        closeDetails();
+    }
+});
 
 
 

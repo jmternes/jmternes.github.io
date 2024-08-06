@@ -50,8 +50,9 @@ body {
 
 .left-section h1 {
     margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 4em;
+    margin-bottom: 0.25rem;
+    margin-left: 0.25rem;
+    font-size: 6em;
     color: var(--dark-gray);
     filter: drop-shadow(-1px 0 1px var(--white))
           drop-shadow(1px 0 1px var(--white-lavender))
@@ -61,11 +62,11 @@ body {
 
 .left-section h2 {
     font-size: 2em;
-    color: var(--white-lavender);
-    /* filter: drop-shadow(-0.5px 0 0 var(--white))
-          drop-shadow(0.5px 0 0 var(--white-lavender))
-          drop-shadow(0 -0.5px 0 var(--white-lavender))
-          drop-shadow(0 0.5px 0 var(--white-lavender)); */
+    color: var(--dark-gray);
+    filter: drop-shadow(-1px 0 1px var(--white))
+          drop-shadow(1px 0 1px var(--white-lavender))
+          drop-shadow(0 -1px 1px var(--white-lavender))
+          drop-shadow(0 1px 1px var(--white-lavender));
     opacity: 0; /* Start invisible */
     transition: opacity 1s ease-in-out; /* Smooth transition for fade effect */
 }
@@ -106,21 +107,24 @@ body {
 }
 
 .dropdown-header:hover {
-    transform: scale(1.2);
-    transition: 0.15s ease-in-out;
+    /* transform: scale(1.2); */
+    letter-spacing: .105em;
+    transition: 0.1s ease-in-out;
     color: var(--medium-lavender);
 }
 
 .dropdown-header.active {
-    transform: scale(1.2);
-    transition: 0.15s ease-in-out;
+    /* transform: scale(1.2); */
+    /* letter-spacing: .105em; */
+    transition: 0.1s ease-in-out;
     color: var(--white-lavender);
     margin-top: 1rem;
 }
 
 .dropdown-header.active:hover {
     color: var(--medium-lavender);
-    transition: 0.15s ease-in-out;
+    letter-spacing: .105em;
+    transition: 0.1s ease-in-out;
 }
 
 .dropdown-content {
@@ -160,6 +164,8 @@ body {
     flex-direction: row;
 }
 
+
+
 /* .projectItem {
     color: var(--white);
 } */
@@ -179,11 +185,13 @@ body {
 
 
 .projectItem:hover {
-    transform: scale(1.05); /* Slightly scale up on hover */
+    /* transform: scale(1.05); */
+    /* letter-spacing: .105em; */
     color: var(--medium-lavender); /* Change text color on hover */
+    transition: .1s ease-in-out;
 }
 
-.projectItem:active {
+.projectItem.active {
     transform: scale(1.05); /* Slightly scale up more on active */
     color: var(--medium-lavender); /* Change text color on active */
 }
@@ -208,8 +216,6 @@ body {
     background-color: var(--dark-gray);
     color: var(--light-lavender);
     padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     width: 80%; /* Consistent width with project items */
     text-align: center;
     display: none; /* Hidden by default */
@@ -217,8 +223,9 @@ body {
     opacity: 0; /* Start invisible */
     max-height: 0; /* Start with no height */
     overflow: hidden;
+    padding-bottom: 14rem;
     margin: 0 auto;
-    margin-bottom: 5rem;
+    border: 1px solid red;
 }
 
 #contact-content {
@@ -231,6 +238,11 @@ body {
 #contact-content a {
     color: var(--white);
     text-decoration: none;
+}
+
+.contactLink {
+    margin-top: 5rem;
+    font-size: 1.2rem;
 }
 
 .contactLink:hover {
