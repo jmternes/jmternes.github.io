@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
+<link href='https://unpkg.com/css.gg@2.0.0/icons/css/template.css' rel='stylesheet'>
     <link rel="stylesheet" href="styler.css">
 </head>
 <body>
@@ -22,20 +23,20 @@
                     About Me
                 </div>
                 <div class="dropdown-content" id="about-content">
-                    <p>I'm a builder of web things. I like building. I like learning. I like the opportunity it gives me to build things I'm passionate about, like sports, games, etc.  learning. I like the opportunity it gives me to build things I'm passionate about, like sports, games, etc. learning. I like the opportunity it gives me to build things I'm passionate about, like sports, games, etc.</p>
+                    <p>Hello there, I'm John Michael. I'm what you might call a multipotentialite. I have a vast interest and affinity for many things  I acquired technical software development skills during the pandemic, and I enjoy all things technology, and how interwoven it's become with many of my other interests, like sports, media, I like the opportunity it gives me to build things I'm passionate about, like sports, games, etc.  learning. I like the opportunity it gives me to build things I'm passionate about, like sports, games, etc. learning. I like the opportunity it gives me to build things I'm passionate about, like sports, games, etc.</p>
                 </div>
             </div>
             <div class="dropdown">
                 <div class="dropdown-header" onclick="toggleDropdown('work-content')">
-                    My Work
+                    My Work 
                 </div>
 
                 <div class="dropdown-content" id="work-content">
                     <div class="projectItem" onclick="toggleDetails(this)">
                         Boredless Games
                         <div class="projectDetails">
-                            <p>Description: A platform for interactive games.</p>
-                            <p>Technologies: React, Node.js, MongoDB</p>
+                            <p>A web app that allows users to filter criteria, browse, and search for games.</p>
+                            <p>HTML, CSS, JavaScript</p>
                         </div>
                     </div>
                     <div class="projectItem" onclick="toggleDetails(this)">
@@ -75,10 +76,21 @@
                     Contact
                 </div>
                 <div class="dropdown-content" id="contact-content">
-                    <div class="contactLink"><a href="mailto:jmternes@gmail.com"><i class="gg-mail"></i></a></div>
-                    <div class="contactLink">github.com/jmternes</div>
-                    <div class="contactLink">resume?</div>
+                    <div class="contactLink">
+                        <a href="mailto:jmternes@gmail.com">
+                            <i class="gg-mail"></i>
+                            <span class="hover-text">Email Me!</span>
+                        </a>
+                    </div>
+                    <!-- <div class="contactLink">github.com/jmternes</div> -->
+                    <div class="contactLink">
+                        <a href="https://docs.google.com/document/d/1aY2sXYcbFm1uGb13JFH0QSQgMr6xa5eXtmFzFrETLsg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            <i class="gg-template"></i>
+                            <span class="hover-text">My Resume</span>
+                        </a>
+                    </div>
                 </div>
+                
                 
             </div>
             <div id="projectDetailsContainer"></div>
