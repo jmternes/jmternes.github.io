@@ -63,13 +63,14 @@ body {
 .left-section h2 {
     font-size: 2em;
     color: var(--dark-gray);
-    filter: drop-shadow(-1px 0 1px var(--white))
-          drop-shadow(1px 0 1px var(--white-lavender))
-          drop-shadow(0 -1px 1px var(--white-lavender))
-          drop-shadow(0 1px 1px var(--white-lavender));
+    filter: drop-shadow(-0.33px 0 0.33px var(--white))
+          drop-shadow(0.33px 0 0.33px var(--white-lavender))
+          drop-shadow(0 -0.33px 0.33px var(--white-lavender))
+          drop-shadow(0 0.33px 0.33px var(--white-lavender));
     opacity: 0; /* Start invisible */
     transition: opacity 1s ease-in-out; /* Smooth transition for fade effect */
 }
+
 
 .right-section {
     flex: 1;
