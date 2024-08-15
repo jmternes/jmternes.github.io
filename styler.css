@@ -30,7 +30,7 @@ body {
     max-width: 1200px;
     height: 500px;
     /* box-shadow: 0 0 10px var(--white-lavender); */
-    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,  
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
               100%, 0.8),
               /* shadow ring 👇 */
               0 0 0 1px hsla(0, 0%, 100%, 0.6),
@@ -109,7 +109,7 @@ body {
 
 .dropdown-header:hover {
     /* transform: scale(1.2); */
-    letter-spacing: .105em;
+    letter-spacing: .06em;
     transition: 0.1s ease-in-out;
     color: var(--medium-lavender);
 }
@@ -118,14 +118,16 @@ body {
     /* transform: scale(1.2); */
     /* letter-spacing: .105em; */
     transition: 0.1s ease-in-out;
-    color: var(--white-lavender);
+    /* color: var(--white-lavender); */
+    color: var(--medium-lavender);
+    letter-spacing: .06em;
     margin-top: 1rem;
 }
 
 .dropdown-header.active:hover {
-    color: var(--medium-lavender);
-    letter-spacing: .105em;
+    color: var(--white-lavender);
     transition: 0.1s ease-in-out;
+    letter-spacing: normal;
 }
 
 .dropdown-content {
