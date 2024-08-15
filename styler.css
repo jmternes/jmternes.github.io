@@ -42,7 +42,7 @@ body {
 }
 
 .left-section {
-    flex: 0.5;
+    flex: 0.55;
     padding: 12px;
     border-right: 1px solid var(--white-lavender);
     background-color: var(--dark-gray);
@@ -355,7 +355,9 @@ body {
 
 .contactLink:hover i {
     transform: scale(1.2); /* Small scale effect if needed */
-    transition: .3s ease-in-out;
+    transition: .1s ease-in-out;
+    color: var(--medium-lavender);
+
 }
 
 
