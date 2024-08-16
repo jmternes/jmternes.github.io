@@ -118,16 +118,15 @@ body {
     /* transform: scale(1.2); */
     /* letter-spacing: .105em; */
     transition: 0.1s ease-in-out;
-    /* color: var(--white-lavender); */
-    color: var(--medium-lavender);
+    color: var(--white-lavender);
     letter-spacing: .06em;
     margin-top: 1rem;
 }
 
 .dropdown-header.active:hover {
-    color: var(--white-lavender);
+    color: var(--medium-lavender);
     transition: 0.1s ease-in-out;
-    letter-spacing: normal;
+    letter-spacing: .105em;
 }
 
 .dropdown-content {
@@ -355,9 +354,8 @@ body {
 
 .contactLink:hover i {
     transform: scale(1.2); /* Small scale effect if needed */
-    transition: .1s ease-in-out;
-    color: var(--medium-lavender);
-
+    /* transition: .1s ease-in-out;
+    color: var(--medium-lavender); */
 }
 
 
