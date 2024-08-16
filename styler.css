@@ -373,3 +373,43 @@ body {
     transform: translateY(0); /* Slide up to the top without leaving view */
     transition: transform 2s ease-in-out, margin 2s ease-in-out; /* Smooth transition for moving to top */
 }
+
+
+/* MOBILE STYLING */
+
+@media screen and (max-width: 800px) {
+
+    .container {
+        flex-direction: column;
+        height: 70%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .dropdown-header {
+        text-align: center;
+        position: relative;
+        margin-top: 0;
+    }
+
+    .dropdown-content {
+        margin-bottom: 1rem;
+        overflow: scroll;
+    }
+
+    #about-content {
+        margin-top: 0;
+    }
+
+    #work-content {
+        flex-direction: column;
+    }
+
+    #dynamic-word {
+        display: none;
+    }
+
+
+}
