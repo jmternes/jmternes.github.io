@@ -186,6 +186,7 @@ body {
 }
 
 
+
 .projectItem:hover {
     /* transform: scale(1.05); */
     /* letter-spacing: .105em; */
@@ -201,7 +202,7 @@ body {
 .projectDetails {
     display: none; /* Hidden by default */
     background-color: var(--dark-gray);
-    color: var(--light-lavender);
+    color: var(--white);
     padding: 10px;
     transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out; /* Smooth transition */
     opacity: 0; /* Hidden initially */
@@ -213,10 +214,9 @@ body {
     border: 1px solid red; /* For debugging, remove if needed */
 }
 
-
 #projectDetailsContainer {
     background-color: var(--dark-gray);
-    color: var(--light-lavender);
+    color: var(--white);
     padding: 15px;
     width: 80%; /* Consistent width with project items */
     text-align: center;
